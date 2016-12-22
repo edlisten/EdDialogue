@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    $(function(){
+       $("#headText").html("Enter a new width and height");
+    
+    
+    }); // end default
+    
+    function resize(){
+    var width = Number($("#width").val());
+    var height = Number($("#height").val());
+    console.log(width);
+    console.log(height);
+
+    google.script.host.setWidth(width);
+    google.script.host.setHeight(height);
+
+    
+    };
+    
+    
+    
+    </script>
+    
+    
+  </head>
+  <body>
+    <p id="headText"></p>
+    Width: <input type="text" id="width" value="500"><br><br>
+    Height: <input type="text" id="height" value="500"><br>
+    <br>
+    <button onClick="resize()">Resize</button>
+    
+    
+    
+    
+  </body>
+</html>
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css">
+<style>
+#onoff {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 8em
+}
+
+</style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    
+    <script>
+//    http://stackoverflow.com/questions/12093509/jquery-add-css-to-head
+//http://stackoverflow.com/questions/3829687/change-the-href-of-a-css-link-via-jquery
+    $(function() {
+      google.script.run.withSuccessHandler(populateDefaults).switchDefaults();
+    });
+   
+   function populateDefaults(defaults){
+   console.log(defaults);
+
+  $(defaults.swCss).appendTo("head");
+  $(defaults.swJs).appendTo("head");
+     $("#enableDisable").switchButton();
+     $("#enableDisable").change(function(){
+      if (this.checked){
+         $("#result").html("on");
+      } else {
+         $("#result").html("off");
+      }
+      });
+   
+   
+   };
+   
+   
+   
+   
+      </script>
+    
+  </head>
+  <body>
+            <div align="center" id="onoff"><input id="enableDisable" type="checkbox"></div> <br>
+            <span id="result">...</span>
+    
+    
+    
+  </body>
+</html>
+
+

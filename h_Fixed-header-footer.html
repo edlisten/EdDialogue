@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+        <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    function addLine() {
+        $("#add").append(
+            "<hr><br><hr><br><hr><br><hr><br><hr><br><hr><br><hr><br><hr><br><hr><br><hr><br><hr><br>"
+        );
+    }
+    </script>
+<style>
+    
+body {
+    margin: 0px;
+    padding:0px;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#header,#footer {
+    position: fixed;
+    width: 96%;
+    padding: 10px 10px 10px 10px;
+}
+
+#header {
+    top: 0;
+}
+
+#footer {
+    bottom: 0;
+}
+
+#contentContainer {
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
+    width: 100%;
+    border-top: 2px solid #F2F2F2;
+    border-bottom: 2px solid #F2F2F2;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+#content {
+    padding: 10px 10px 10px 10px;
+}
+
+    </style>
+    
+  </head>
+  <body>
+  
+    <div id="header">
+        <button onclick="addLine()">Add</button>
+    </div>
+    
+    <div id="contentContainer"><div id="content">
+        Add Lines
+        <span id="add"></span>
+    </div></div>
+    
+    <div id="footer">
+        Bjorn Behrendt
+    </div>
+    
+  </body>
+</html>
